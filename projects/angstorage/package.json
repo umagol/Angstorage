@@ -1,6 +1,32 @@
 {
   "name": "angstorage",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "version_short": "1.0",
+  "description": "  V0.0.1.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umagol/Ng-Webstorage.git"
+  },
+  "homepage": "https://satish-umagol.blogspot.com",
+  "author": {
+    "name": "Satish Umagol",
+    "url": "https://github.com/umagol"
+  },
+  "bugs": {
+    "url": "https://github.com/umagol/Angstorage/issues"
+  },
+  "keywords": [
+    "Angular Web storage",
+    "Angular Cookies Storage",
+    "Angular Localstorage ",
+    "Angular Sessionstorage",
+    "Cookie storage",
+    "cookie",
+    "Web Storage",
+    "Anglar storage",
+    "angular all is one web storage"
+  ],
   "peerDependencies": {
     "@angular/common": "^11.0.4",
     "@angular/core": "^11.0.4"
