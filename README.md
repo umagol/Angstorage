@@ -18,7 +18,7 @@ AngStroage is also provide some another function link isset... using for check d
 
         npm install angstorage --save
 
-This commond use for adding package in your project `--save` is use to add this package info in your package.josn file
+This commond use for adding package in your project `--save` is use to add this package info in your package.json file
 
 ## Import
 
