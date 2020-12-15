@@ -1,22 +1,22 @@
 # Angstorage
 
 [![image](https://raw.githubusercontent.com/umagol/Angstorage/master/projects/angstoragetest/src/assets/logo.png)](https://github.com/umagol/Angstorage?tab=repositories)
-
     AngStrorage is Angular Library (Package) for Using store small size of data on web browser in cookie storage, session storage and Local storage 
     AngStroage is also provide some another function link isset... using for check data is store or not. 
 
 ## Table of contents
-    [Installation](#Installation)
-    [Import](#Import)
-    [Funstion](#Function)
-    [Usage](#Usage)
-    [License](#License)
+
+- [Installation](#Installation)
+- [Import](#Import)
+- [Funstion](#Function)
+- [Usage](#Usage)
+- [License](#License)
 
 # Installation
 
         npm install angstorage --save
 
-        This commond use for adding package in your project `--save` is use to add this package info in your package.josn file
+This commond use for adding package in your project `--save` is use to add this package info in your package.josn file
 
 ## Import
 
@@ -24,7 +24,7 @@
 
     }
 
-    Add variable in your constructor for using hole file
+Add variable in your constructor for using hole file
 
 ## Usage
 
@@ -141,26 +141,26 @@ ss
         Cookie_Value: string,
         ExpireTime = 18000000)
         
-        Using for set data in cookies storage
+Using for set data in cookies storage
 
     2. getCookie(
         Cookie_Name: string)
 
-        Get data in cookie storage
+Get data in cookie storage
 
     3. public removeCookie(
         Cookie_Name: string)
         
-        Remove  specific data in cookie storage
+Remove  specific data in cookie storage
     
     4. public removeAllCookie()
 
-        Clear all cookie 
+Clear all cookie 
 
     5. public isCookie(
         Cookie_Name: any)
  
-        Check cookie is set or not
+Check cookie is set or not
 
 
 
@@ -170,26 +170,26 @@ ss
         Localstorage_Name: string,
         Localstorage_Value: string)
 
-        :Set data in localstorage
+:Set data in localstorage
 
     7. public getLocalStorage(
         Localstorage_Name: string)
         
-        :Get data form Localstorage
+:Get data form Localstorage
 
     8. public removeLocalStorage(
         Localstorage_Name: string)
         
-        :Remove data from Loalstorage
+:Remove data from Loalstorage
 
     9. public removeAllLocalStorage()
 
-        :clear all localtorage data 
+:clear all localtorage data 
 
     10.public isLocalStorage(
         Localstorage_Name: string)
         
-        :Check data is set or not
+:Check data is set or not
 
 
 # Session Storage
@@ -198,26 +198,26 @@ ss
         Sessionstorage_Name: string,
         Sessionstorage_Value: string)
 
-         Set data in sessionstorage
+Set data in sessionstorage
 
     12. public getSessionStorage(
         Sessionstorage_Name: string)
 
-         Get data form sessionstorage
+Get data form sessionstorage
 
     13. public removeSessionStorage(
         Sessionstorage_Name: string)
 
-         Remove specific data in session storage
+Remove specific data in session storage
 
     14. public removeAllSessionStorage()
 
-         clear all sessiontorage data 
+clear all sessiontorage data 
 
     15. public isSessionStorage(
         Sessionstorage_Name: string)
 
-         Check data is set or not
+Check data is set or not
 
 
 
