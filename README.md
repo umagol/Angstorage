@@ -1,27 +1,228 @@
 # Angstorage
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
+[![image](https://raw.githubusercontent.com/umagol/Angstorage/master/projects/angstoragetest/src/assets/logo.png)](https://github.com/umagol/Angstorage?tab=repositories)
 
-## Development server
+    AngStrorage is Angular Library (Package) for Using store small size of data on web browser in cookie storage, session storage and Local storage 
+    AngStroage is also provide some another function link isset... using for check data is store or not. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Table of contents
+    [Installation](#Installation)
+    [Import](#Import)
+    [Funstion](#Function)
+    [Usage](#Usage)
+    [License](#License)
 
-## Code scaffolding
+# Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+        npm install angstorage --save
 
-## Build
+        This commond use for adding package in your project `--save` is use to add this package info in your package.josn file
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Import
 
-## Running unit tests
+    constructor( private NgWebStroage: AngstorageService ){
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    }
 
-## Running end-to-end tests
+    Add variable in your constructor for using hole file
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Usage
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Cookie Stroage
+
+
+  getCookie(): any{
+
+    this.getCookiesdata = this.ANgWebStroage.getCookie(this.CookieName);
+ 
+  }
+
+  setCookie(): any{
+
+    this.ANgWebStroage.setCookie(this.CookieName, this.CookieValue,60000);
+ 
+  }
+
+  removeCookie(): any{
+
+    this.ANgWebStroage.removeCookie(this.CookieName);
+ 
+  }
+
+  removeAllCookie(): any{
+
+    this.NgWebStroage.removeAllCookie();
+  
+  }
+  
+  isSetCookie(): any{
+
+    this.NgWebStroage.isCookie(this.CookieName);
+
+  }
+
+
+# Local Storage
+
+  getLocalstorage(): any{
+
+    this.getlocalstoragedata = this.NgWebStroage.getLocalStorage(this.LocalStorageName);
+ 
+  }
+
+  setLocalstorage(): any{
+   
+    this.NgWebStroage.setLocalStorage(this.LocalStorageName, this.LocalStorageValue);
+ 
+  }
+
+  removeLocalstorage(): any{
+
+    this.NgWebStroage.removeLocalStorage(this.LocalStorageName);
+  
+  }
+
+  removeAllLocalstorage(): any{
+
+    this.NgWebStroage.removeAllLocalStorage();
+ 
+  }
+
+  isSetLocalstorage(): any{
+
+    this.NgWebStroage.isLocalStorage(this.LocalStorageName);
+ 
+  }
+
+
+# Session Storage
+
+
+  getsessionstorage(): any{
+
+    this.getsessionstoragedata = this.NgWebStroage.getSessionStorage(this.SessionStorageName);
+  
+  }
+
+  setSessionstorage(): any{
+
+    this.NgWebStroage.setSessionStorage(this.SessionStorageName,this.SessionStorageValue);
+  
+  }
+
+  removesessionstorage(): any{
+
+    this.NgWebStroage.removeSessionStorage(this.SessionStorageName);
+  
+  }
+
+  removeAllsessionstorage(): any{
+
+    this.NgWebStroage.removeAllSessionStorage();
+ 
+  }
+
+  isSetsessionstorage(): any{
+
+    this.NgWebStroage.isSessionStorage(this.SessionStorageName);
+  
+  }
+
+ss
+
+
+## Function
+
+# Cookie Function
+
+    1. setCookie(
+        Cookie_Name: string,
+        Cookie_Value: string,
+        ExpireTime = 18000000)
+        
+        Using for set data in cookies storage
+
+    2. getCookie(
+        Cookie_Name: string)
+
+        Get data in cookie storage
+
+    3. public removeCookie(
+        Cookie_Name: string)
+        
+        Remove  specific data in cookie storage
+    
+    4. public removeAllCookie()
+
+        Clear all cookie 
+
+    5. public isCookie(
+        Cookie_Name: any)
+ 
+        Check cookie is set or not
+
+
+
+# Local Storage
+
+    6. public setLocalStorage(
+        Localstorage_Name: string,
+        Localstorage_Value: string)
+
+        :Set data in localstorage
+
+    7. public getLocalStorage(
+        Localstorage_Name: string)
+        
+        :Get data form Localstorage
+
+    8. public removeLocalStorage(
+        Localstorage_Name: string)
+        
+        :Remove data from Loalstorage
+
+    9. public removeAllLocalStorage()
+
+        :clear all localtorage data 
+
+    10.public isLocalStorage(
+        Localstorage_Name: string)
+        
+        :Check data is set or not
+
+
+# Session Storage
+
+    11. public setSessionStorage(
+        Sessionstorage_Name: string,
+        Sessionstorage_Value: string)
+
+         Set data in sessionstorage
+
+    12. public getSessionStorage(
+        Sessionstorage_Name: string)
+
+         Get data form sessionstorage
+
+    13. public removeSessionStorage(
+        Sessionstorage_Name: string)
+
+         Remove specific data in session storage
+
+    14. public removeAllSessionStorage()
+
+         clear all sessiontorage data 
+
+    15. public isSessionStorage(
+        Sessionstorage_Name: string)
+
+         Check data is set or not
+
+
+
+
+## License
+
+    `MIT License`
+
