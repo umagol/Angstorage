@@ -1,6 +1,6 @@
 # Angstorage
 
-   <img src="https://raw.githubusercontent.com/umagol/Angstorage/master/projects/angstoragetest/src/assets/logo.png" width="200" height="200" style="margin-right:300px;" />
+   <img src="https://raw.githubusercontent.com/umagol/Angstorage/master/projects/angstoragetest/src/assets/logo.png" width="100%"  style="margin-right:300px;" />
 
 AngStrorage is an Angular Library (Package),it is used for storing data on Web Browser in Cookie Storage, Session Storage and Local Storage. 
 AngStroage also provides other functions like isset isSetCookie(), isSetLocalstorage(), isSetLocalstorage for checking data is set or not.
