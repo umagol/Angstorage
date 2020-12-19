@@ -113,7 +113,8 @@ export class AngstorageService {
 
   public setLocalStorage(Localstorage_Name: string, Localstorage_Value: string): void {
 
-    const date = new Date()
+    
+    const date = new Date();
 
     try {
       localStorage.setItem(Localstorage_Name, Localstorage_Value);
@@ -157,6 +158,8 @@ export class AngstorageService {
     }
   }
 
+/////////////////////////////////////////////////////////////////////////////////
+
   /**
    * @Remove All Data is Localstorage
    */
@@ -168,6 +171,8 @@ export class AngstorageService {
       throw new Error(error);
     }
   }
+
+////////////////////////////////////////////////////////////////////////////////
 
   /**
    * @param Localstorage_Name : Name For check data is exist or not
