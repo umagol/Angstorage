@@ -1,7 +1,7 @@
 /**
  * Author: Satish Umagol
  * Github: https://github.com/umagol
- * Version:1.0.0
+ * Version:2.0.0
  */
 
 import { Injectable } from '@angular/core';
@@ -276,4 +276,76 @@ export class AngstorageService {
     }
   }
 
+/////////////////////////////////// Set Expiry time to LocalStorage and SessionStorage ////////////////////////////////////////////
+
+
+/**
+ * 
+ * @param Localstorage_Name Localstorage Name
+ * @param Localstorage_Value Localstorage Value
+ * @param ExpireTime Localstorage Expiry Time
+ */
+
+setLocalStorageWithExpiry(Localstorage_Name: string, Localstorage_Value: string,ExpireTime: any): any {
+  const now = new Date()
+  const item = {
+      value: Localstorage_Value,
+      expiry: now.getTime() + ExpireTime,
+  }
+  localStorage.setItem(Localstorage_Name, JSON.stringify(item))
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * 
+ * @param Localstorage_Name Localstorage Name
+ */
+
+getLocalStorageWithExpiry(Localstorage_Name: string) {
+  const itemStr = localStorage.getItem(Localstorage_Name);
+  if (!itemStr) {
+      return null
+  }
+  const item = JSON.parse(itemStr)
+  const now = new Date()
+  if (now.getTime() > item.expiry) {
+      localStorage.removeItem(Localstorage_Name);
+      return null;
+  }
+  return item.value
+}
+
+/**
+ * 
+ * @param Sessionstorage_Name Session storage Name
+ * @param Sessionstorage_Value Sessin storage Value
+ * @param ExpireTime Session storage Expiry Time
+ */
+
+setSessionStorageWithExpiry(Sessionstorage_Name: string, Sessionstorage_Value: string, ExpireTime: any): any {
+  const now = new Date()
+  const item = {
+      value: Sessionstorage_Value,
+      expiry: now.getTime() +  ExpireTime,
+  }
+  sessionStorage.setItem(Sessionstorage_Name, JSON.stringify(item))
+}
+
+
+
+getSessionStorageWithExpiry(Sessionstorage_Name: string, key: any) {
+  const itemStr = sessionStorage.getItem(Sessionstorage_Name);
+  if (!itemStr) {
+      return null
+  }
+  const item = JSON.parse(itemStr)
+  const now = new Date()
+  if (now.getTime() > item.expiry) {
+      sessionStorage.removeItem(Sessionstorage_Name);
+      console.log("workign");
+      return null;
+  }
+  return item.value
+}
 }
