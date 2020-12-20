@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { AngstorageService } from 'angstorage';
+import { SampletestService } from './sampletest.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -9,7 +12,9 @@ import { AngstorageService } from 'angstorage';
 export class AppComponent {
   title = 'angstoragetest';
 
-  constructor( private NgWebStroage: AngstorageService ){}
+  constructor(
+     private NgWebStroage: AngstorageService,
+     private localhostsettimeTest: SampletestService ){}
 
   CookieName:string = "cookiesName";
   CookieValue:string = "cookiesValue";
@@ -28,7 +33,7 @@ export class AppComponent {
 
   getCookie(): any{
     this.getCookiesdata = this.NgWebStroage.getCookie(this.CookieName);
-  }
+ }
 
   setCookie(): any{
     this.NgWebStroage.setCookie(this.CookieName, this.CookieValue,60000);
@@ -44,6 +49,7 @@ export class AppComponent {
   
   isSetCookie(): any{
     this.NgWebStroage.isCookie(this.CookieName);
+  
   }
 
 //////////////////////////////LocalStorage////////////////////////////////
@@ -55,6 +61,16 @@ export class AppComponent {
 
   setLocalstorage(): any{
     this.NgWebStroage.setLocalStorage(this.LocalStorageName, this.LocalStorageValue);
+  }
+
+  setLocalstoragewithexpiry(): any{
+    this.localhostsettimeTest.setLocalStorageWithExpiry("satish Umagol","Satish umagol Valuse",10000);
+  }
+
+
+  getLocalstoragewithexpiry(): any{
+    let data = this.localhostsettimeTest.getLocalStorageWithExpiry('satish Umagol');
+    console.log(data);
   }
 
   removeLocalstorage(): any{
@@ -80,6 +96,16 @@ export class AppComponent {
 
     this.NgWebStroage.setSessionStorage(this.SessionStorageName,this.SessionStorageValue);
   }
+
+  setsessionstoragewithexpiry(): any{ 
+   this.localhostsettimeTest.setSessionStorageWithExpiry(" session satish Umagol","Satish umagol Valuse",10000);
+  
+  }
+  
+  getsessionstoragewithexpiry(): any{
+    let Datasesseion = this.localhostsettimeTest.getSessionStorageWithExpiry(' session satish Umagol');
+    console.log(Datasesseion);
+   }
 
   removesessionstorage(): any{
     this.NgWebStroage.removeSessionStorage(this.SessionStorageName);
