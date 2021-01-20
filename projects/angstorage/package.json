@@ -1,12 +1,12 @@
 {
   "name": "angstorage",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "version_short": "2.0",
-  "description": "  V0.0.1.",
+  "description": " Angular Library For store data in web browser. ",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umagol/Ng-Webstorage.git"
+    "url": "https://github.com/umagol/Angstorage"
   },
   "homepage": "https://satish-umagol.blogspot.com",
   "author": {
