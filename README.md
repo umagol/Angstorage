@@ -238,8 +238,6 @@ AngStroage also provides other functions like isset isSetCookie(), isSetLocalsto
 
 
 
-
-
 ## License
     MIT 
 
