@@ -31,7 +31,7 @@ export class AngstorageService {
       document.cookie = Cookie_Name + "=" + value + "; expires=" + date.toUTCString() + "; path=/";
     }
     catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -67,7 +67,7 @@ export class AngstorageService {
       // Set Cookies
       document.cookie = Cookie_Name + "=; expires=" + date.toUTCString() + "; path=/";
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -85,7 +85,7 @@ export class AngstorageService {
         document.cookie = key[0] + " =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
       }
     } catch (error) {
-      console.log(error)
+      console.error(error)
     }
   }
 
@@ -119,7 +119,7 @@ export class AngstorageService {
     try {
       localStorage.setItem(Localstorage_Name, Localstorage_Value);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -154,7 +154,7 @@ export class AngstorageService {
         //Error
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -205,7 +205,7 @@ export class AngstorageService {
     try {
       sessionStorage.setItem(Sessionstorage_Name, Sessionstorage_Value);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -240,7 +240,7 @@ export class AngstorageService {
         //Error
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -343,7 +343,6 @@ getSessionStorageWithExpiry(Sessionstorage_Name: string, key: any) {
   const now = new Date()
   if (now.getTime() > item.expiry) {
       sessionStorage.removeItem(Sessionstorage_Name);
-      console.log("workign");
       return null;
   }
   return item.value
