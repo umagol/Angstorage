@@ -3,158 +3,42 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngstorage": {
+    "angstorage": {
       "projectType": "library",
-      "root": "projects/ngstorage",
-      "sourceRoot": "projects/ngstorage/src",
+      "root": "projects/angstorage",
+      "sourceRoot": "projects/angstorage/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ngstorage/tsconfig.lib.json",
-            "project": "projects/ngstorage/ng-package.json"
+            "tsConfig": "projects/angstorage/tsconfig.lib.json",
+            "project": "projects/angstorage/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngstorage/tsconfig.lib.prod.json"
+              "tsConfig": "projects/angstorage/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngstorage/src/test.ts",
-            "tsConfig": "projects/ngstorage/tsconfig.spec.json",
-            "karmaConfig": "projects/ngstorage/karma.conf.js"
+            "main": "projects/angstorage/src/test.ts",
+            "tsConfig": "projects/angstorage/tsconfig.spec.json",
+            "karmaConfig": "projects/angstorage/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngstorage/tsconfig.lib.json",
-              "projects/ngstorage/tsconfig.spec.json"
+              "projects/angstorage/tsconfig.lib.json",
+              "projects/angstorage/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        }
-      }
-    },
-    "angstragetest": {
-      "projectType": "application",
-      "schematics": {},
-      "root": "projects/angstragetest",
-      "sourceRoot": "projects/angstragetest/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/angstragetest",
-            "index": "projects/angstragetest/src/index.html",
-            "main": "projects/angstragetest/src/main.ts",
-            "polyfills": "projects/angstragetest/src/polyfills.ts",
-            "tsConfig": "projects/angstragetest/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "projects/angstragetest/src/favicon.ico",
-              "projects/angstragetest/src/assets"
-            ],
-            "styles": [
-              "projects/angstragetest/src/styles.css"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/angstragetest/src/environments/environment.ts",
-                  "with": "projects/angstragetest/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "angstragetest:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "angstragetest:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "angstragetest:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/angstragetest/src/test.ts",
-            "polyfills": "projects/angstragetest/src/polyfills.ts",
-            "tsConfig": "projects/angstragetest/tsconfig.spec.json",
-            "karmaConfig": "projects/angstragetest/karma.conf.js",
-            "assets": [
-              "projects/angstragetest/src/favicon.ico",
-              "projects/angstragetest/src/assets"
-            ],
-            "styles": [
-              "projects/angstragetest/src/styles.css"
-            ],
-            "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/angstragetest/tsconfig.app.json",
-              "projects/angstragetest/tsconfig.spec.json",
-              "projects/angstragetest/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/angstragetest/e2e/protractor.conf.js",
-            "devServerTarget": "angstragetest:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "angstragetest:serve:production"
-            }
           }
         }
       }
@@ -274,47 +158,7 @@
           }
         }
       }
-    },
-    "angstorage": {
-      "projectType": "library",
-      "root": "projects/angstorage",
-      "sourceRoot": "projects/angstorage/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "projects/angstorage/tsconfig.lib.json",
-            "project": "projects/angstorage/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/angstorage/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/angstorage/src/test.ts",
-            "tsConfig": "projects/angstorage/tsconfig.spec.json",
-            "karmaConfig": "projects/angstorage/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/angstorage/tsconfig.lib.json",
-              "projects/angstorage/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
     }
   },
-  "defaultProject": "ngstorage"
+  "defaultProject": "angstorage"
 }

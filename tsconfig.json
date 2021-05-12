@@ -1,6 +1,13 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "angstorage": [
+        "dist/angstorage/angstorage",
+        "dist/angstorage"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -18,19 +25,10 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "ngstorage": [
-        "dist/ngstorage/ngstorage",
-        "dist/ngstorage"
-      ],
-      "angstorage": [
-        "dist/angstorage/angstorage",
-        "dist/angstorage"
-      ]
-    }
+    ]
   },
   "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true

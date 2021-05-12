@@ -1,7 +1,7 @@
 {
   "name": "angstorage",
-  "version": "2.0.1",
-  "version_short": "2.0",
+  "version": "3.0.1",
+  "version_short": "3.1",
   "description": " Angular Library For store data in web browser. ",
   "license": "MIT",
   "repository": {
@@ -28,8 +28,8 @@
     "angular all is one web storage"
   ],
   "peerDependencies": {
-    "@angular/common": "^11.0.4",
-    "@angular/core": "^11.0.4"
+    "@angular/common": "^11.2.13",
+    "@angular/core": "^11.2.13"
   },
   "dependencies": {
     "tslib": "^2.0.0"
