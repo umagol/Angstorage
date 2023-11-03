@@ -112,15 +112,7 @@
   */
  
    public setLocalStorage(Localstorage_Name: string, Localstorage_Value: string): void {
- 
-     
-     const date = new Date();
- 
-     try {
-       localStorage.setItem(Localstorage_Name, Localstorage_Value);
-     } catch (error) {
-       console.error(error);
-     }
+    localStorage.setItem(Localstorage_Name, Localstorage_Value);
    }
  
  /////////////////////////////////////////////////////////////////////////////
@@ -129,16 +121,11 @@
   * @param Localstorage_Name localstorage Name For get data
   */
    public getLocalStorage(Localstorage_Name: string): any | null | undefined {
- 
-     try {
-       const value = localStorage.getItem(Localstorage_Name);
-       if (value == null) {
-         return null;
-       }
-       return value;
-     } catch (error) {
-       throw new Error(error);
-     }
+      const value = localStorage.getItem(Localstorage_Name);
+      if (value == null) {
+        return null;
+      }
+      return value;
    }
  
  ////////////////////////////////////////////////////////////////////////////////
@@ -164,12 +151,7 @@
     * @Remove All Data is Localstorage
     */
    public removeAllLocalStorage(): void {
- 
-     try {
-       const Remove_all_data = localStorage.clear();
-     } catch (error) {
-       throw new Error(error);
-     }
+      const Remove_all_data = localStorage.clear();     
    }
  
  ////////////////////////////////////////////////////////////////////////////////
@@ -180,16 +162,11 @@
    public isLocalStorage(Localstorage_Name: string): boolean {
  
      const data = localStorage.getItem(Localstorage_Name);
-     try {
- 
        if (data == null) {
          return false;
        } else {
          return true;
        }
-     } catch (error) {
-       throw new Error(error);
-     }
    }
  
  
@@ -201,12 +178,9 @@
   */
    public setSessionStorage(Sessionstorage_Name: string, Sessionstorage_Value: string): void {
      const date = new Date()
- 
-     try {
-       sessionStorage.setItem(Sessionstorage_Name, Sessionstorage_Value);
-     } catch (error) {
-       console.error(error);
-     }
+      
+     sessionStorage.setItem(Sessionstorage_Name, Sessionstorage_Value);
+     
    }
  
  //////////////////////////////////////////////////////////////////////////////
@@ -216,15 +190,11 @@
     * @param Sessionstorage_Name Session Name for get data
     */
    public getSessionStorage(Sessionstorage_Name: string): any | null | undefined {
-     try {
-       const value = sessionStorage.getItem(Sessionstorage_Name);
-       if (value == null) {
-         return null;
-       }
-       return value;
-     } catch (error) {
-       throw new Error(error);
-     }
+      const value = sessionStorage.getItem(Sessionstorage_Name);
+      if (value == null) {
+        return null;
+      }
+      return value;
    }
  
  ///////////////////////////////////////////////////////////////////////////////////////
@@ -252,7 +222,7 @@
    public removeAllSessionStorage(): any {
      try {
        const Remove_all_data = sessionStorage.clear();
-     } catch (error) {
+     } catch (error: any) {
        throw new Error(error);
      }
    }
@@ -265,15 +235,11 @@
    public isSessionStorage(Sessionstorage_Name: string): boolean {
  
      const data = sessionStorage.getItem(Sessionstorage_Name);
-     try {
-       if (data == null) {
-         return false;
-       } else {
-         return true;
-       }
-     } catch (error) {
-       throw new Error(error);
-     }
+      if (data == null) {
+        return false;
+      } else {
+        return true;
+      }
    }
  
  /////////////////////////////////// Set Expiry time to LocalStorage and SessionStorage ////////////////////////////////////////////
